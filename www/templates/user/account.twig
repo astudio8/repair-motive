@@ -1,0 +1,80 @@
+{% extends '/layout.twig' %}
+
+{% block pageContent %}
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col l9 m9 s12">
+                    <h4 class="blue-text">Your Account Settings</h4>
+                </div>
+
+                <div class="col s3 dashboard-btn hide-on-small-and-down">
+                    <a href="/dashboard" class="waves-effect waves-light grey darken-3 btn right">Dashboard</a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col l6 m6 s12">
+                    <form class="col s12" id="edit-email-form" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate" name="email" value="{{ me.email }}">
+                                <label for="email" data-error="Please provide a valid Email" data-success="Looks good!">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <button class="waves-effect waves-light light-green darken-1 btn" id="edit-email-btn">Update Email</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12" id="edit-email-response"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col offset-l1 l5 m5 s12">
+                    <form class="col s12" id="edit-password-form" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" name="current_password">
+                                <label for="password">Current Password</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="newPassword" type="password" name="new_password">
+                                <label for="newPassword">New Password</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="newPasswordConfirm" type="password" name="new_password_confirm">
+                                <label for="newPasswordConfirm">Confirm New Password</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <button class="waves-effect waves-light light-green darken-1 btn" id="edit-password-btn">Update Password</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12" id="edit-password-response"></div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

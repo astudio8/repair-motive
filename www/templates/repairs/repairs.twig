@@ -1,0 +1,52 @@
+{% extends '/layout.twig' %}
+
+{% block pageContent %}
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col l9 m9 s12">
+                    <h4 class="blue-text">Repair List</h4>
+                </div>
+
+                <div class="col s3 dashboard-btn hide-on-small-and-down">
+                    <a href="/dashboard" class="waves-effect waves-light grey darken-3 btn right">Dashboard</a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col l4 m6 s12">
+                    {% include 'user/myCarsList.twig' %}
+                </div>
+
+                <div class="col offset-l1 l7 m6 s12">
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th data-field="item">Item</th>
+                                <th data-field="cost">Cost</th>
+                                <th data-field="date" class="hide-on-small-only">Date (Y-M-D)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for repair in repairs %}
+                                <tr>
+                                    <td>{{ repair.item | capitalize }}</td>
+                                    <td>${{ repair.cost|number_format }}</td>
+                                    <td class="hide-on-small-only">{{ repair.date [0:10] }}</td>
+                                    <td><a href="/repair/{{ repair.id }}" class="small light-blue darken-1 btn">Details</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <h5 class="green-text right-align">Total Repair Costs: <strong>${{ repairTotal | number_format }}</strong></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

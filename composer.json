@@ -1,0 +1,22 @@
+{
+  "name": "repair-motive",
+  "config": {
+    "secure-http": false
+  },
+  "require": {
+      "slim/slim": "~2.0",
+      "slim/views": "~0.1",
+      "twig/twig": "1.*",
+      "robmorgan/phinx": "~0.4",
+      "monolog/monolog": "~1.7",
+      "phpmailer/phpmailer": "^5.2",
+      "setasign/fpdf": "1.8",
+      "setasign/fpdi": "1.6.1"
+  },
+
+  "autoload": {
+      "psr-4": {
+        "CarRepair\\": "src/CarRepair"
+      }
+  }
+}

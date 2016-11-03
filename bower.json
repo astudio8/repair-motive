@@ -1,0 +1,10 @@
+{
+  "name": "repair-motive",
+  "description": "Track your car repairs and stuff.",
+  "version": "0.5.2",
+  "private": true,
+  "dependencies": {
+    "Materialize": "materialize#~0.97.6",
+    "remote-list": "0.1.3"
+  }
+}

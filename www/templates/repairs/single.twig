@@ -1,0 +1,36 @@
+{% extends '/layout.twig' %}
+
+{% block pageContent %}
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col l9 m9 s12">
+                    <h4 class="blue-text">Single Repair</h4>
+                </div>
+
+                <div class="col s3 dashboard-btn hide-on-small-and-down">
+                    <a href="/dashboard" class="waves-effect waves-light grey darken-3 btn right">Dashboard</a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col l12 m12 s12">
+
+                    Repair Location: <strong>{{ repair.shop_name }}, {{ repair.shop_address }}</strong><br><br>
+
+                    Item: <strong>{{ repair.item | capitalize }}</strong><br><br>
+                    Cost: <strong>${{ repair.cost|number_format }}</strong><br><br>
+                    Vehicle: <strong>{{ car }}</strong><br><br>
+                    Mileage: <strong>{{ repair.mileage|number_format }}</strong><br><br>
+                    Date: <strong>{{ repair.date [0:10] }}</strong><br><br>
+
+                    <a href="/view-repairs" class="waves-effect waves-light grey darken-3 btn">Back to Repairs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

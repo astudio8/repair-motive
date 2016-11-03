@@ -1,0 +1,6 @@
+.idea
+bower_components
+.vagrant
+logs
+vendor
+node_modules

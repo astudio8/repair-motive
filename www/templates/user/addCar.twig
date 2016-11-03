@@ -1,0 +1,70 @@
+{% extends '/layout.twig' %}
+
+{% block pageContent %}
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col l9 m9 s12">
+                    <h4 class="blue-text">Add A Vehicle</h4>
+                </div>
+
+                <div class="col s3 dashboard-btn hide-on-small-and-down">
+                    <a href="/dashboard" class="waves-effect waves-light grey darken-3 btn right">Dashboard</a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col l4 m6 s12">
+                    {% include 'user/myCarsList.twig' %}
+                </div>
+
+                <div class="col offset-l1 l7 m6 s12">
+                    <h5 class="orange-text">Follow the steps to add a vehicle.</h5>
+
+                    <form class="col s12" id="add-car-form" method="post">
+
+                        <div class="row">
+                            <div class="input-field col l3 m3 s12">
+                                <select id="yearSelect" name="car_year">
+                                    <option value="" disabled selected>Year</option>
+                                    {% for i in 2013..1956 %}
+                                        <option value="{{ i }}">{{ i }}</option>
+                                    {% endfor %}
+                                </select>
+                                <label for="yearSelect">Year</label>
+                            </div>
+
+                            <div class="input-field col l4 m3 s12">
+                                <select id="carMake" name="car_make" class="browser-default">
+                                    <option value="" selected>Manufacturer</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field col l4 m3 s12">
+                                <select id="carModel" name="car_model" class="browser-default">
+                                    <option value="" selected>Model</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <button class="waves-effect waves-light light-green darken-1 btn" id="add-car-btn">Add Vehicle</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12" id="add-car-response"></div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

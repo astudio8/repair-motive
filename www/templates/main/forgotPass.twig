@@ -1,0 +1,44 @@
+{% extends '/layout.twig' %}
+
+{% block pageContent %}
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+
+                <div class="col l6 m6 s12">
+                    <h4 class="orange-text">Reset Your Password</h4>
+
+                    <form class="col s10" id="respass-form" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="emailLogin" type="email" class="validate" name="email">
+                                <label for="emailLogin" data-error="Please provide a valid Email" data-success="Looks good!">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12" id="respass-response"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <button class="waves-effect waves-light btn" id="respass-btn">Begin Password Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <h4 class="orange-text">Need Help?</h4>
+
+                    Use this form to help reset your password. If you're still having problems, you may <a href="/contact">contact us</a> for
+                    additional assistance and we'll do our best to help you.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
