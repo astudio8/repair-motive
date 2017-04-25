@@ -25,8 +25,14 @@ Assuming step one went well and the command ran fine, you'll want to install the
 
 If all of these ran without any issues then you should now have all of the libs and dependencies. Nearly done!
 
+### Step 3 (Phinx)
+In order to install the DB and migrate, you'll need to run Phinx migrate. First, ensure that your /phinx.yml file is accurate with your DB settings.
+Secondly, you'll need to SSH into your VM and navigate to repairmotive.com folder before executing the following command:
+
+```php vendor/robmorgan/phinx/bin/phinx migrate```
+
 ### Step 3
-You'll want to run Gulp. The project has a Gulpfile that utilize a watcher, so you want need to keep running it every time you change the JS
+You'll want to run Gulp. The project has a Gulpfile that utilize a watcher, so you wont need to keep running it every time you change the JS
 or CSS. Everything get's minified into the dist/ directory under www/
 
 ### Step 4
