@@ -31,11 +31,11 @@ Secondly, you'll need to SSH into your VM and navigate to repairmotive.com folde
 
 ```php vendor/robmorgan/phinx/bin/phinx migrate```
 
-### Step 3
+### Step 4
 You'll want to run Gulp. The project has a Gulpfile that utilize a watcher, so you wont need to keep running it every time you change the JS
 or CSS. Everything get's minified into the dist/ directory under www/
 
-### Step 4
+### Step 5
 If everything ran properly, you should be able to visit your browser and go to local.repairmotive.com:8888
 
 Again, this is my first time writting up a guide or releasing any sort of software. Please feel free to email me at adam@alicki.me for help
