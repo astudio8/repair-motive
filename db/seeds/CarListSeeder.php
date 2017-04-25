@@ -1,36 +1,21 @@
 <?php
 
-use Phinx\Migration\AbstractMigration;
+use Phinx\Seed\AbstractSeed;
 
-class InitCars extends AbstractMigration
+class CarListSeeder extends AbstractSeed
 {
     /**
-     * Change Method.
+     * Run Method.
      *
-     * Write your reversible migrations using this method.
+     * Write your database seeder using this method.
      *
-     * More information on writing migrations is available here:
-     * http://docs.phinx.org/en/latest/migrations.html#the-abstractmigration-class
-     *
-     * The following commands can be used in this method and Phinx will
-     * automatically reverse them when rolling back:
-     *
-     *    createTable
-     *    renameTable
-     *    addColumn
-     *    renameColumn
-     *    addIndex
-     *    addForeignKey
-     *
-     * Remember to call "create()" or "update()" and NOT "save()" when working
-     * with the Table class.
+     * More information on writing seeders is available here:
+     * http://docs.phinx.org/en/latest/seeding.html
      */
-	public function change()
-	{
+    public function run()
+    {
 
-
-
-		$this->execute("
+	$this->execute("
 		INSERT INTO cars (car_year, car_make, car_model) VALUES
 		(1909, 'Ford', 'Model T'),
 		(1926, 'Chrysler', 'Imperial'),
@@ -7300,6 +7285,7 @@ class InitCars extends AbstractMigration
 		(2013, 'Volvo', 'C70'),
 		(2013, 'Volvo', 'S60'),
 		(2013, 'Volvo', 'XC90')
-");
-	}
+	");
+	
+    }
 }
