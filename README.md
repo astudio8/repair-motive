@@ -9,6 +9,12 @@ What's the stack? Php, MySQL, HTML / SASS, Javascript (jQuery). MaterializeCSS c
 This is my first ever open source software. It started out as a project, but I realized that this wasn't my passion to create auto-industry related apps.
 I hope someone finds this useful or maybe turns it into something bigger than I did.
 
+## Demo
+
+URL: http://repairmotive.com/
+
+Everything you see in the demo is what is included in the source code.
+
 ## Setting the project up
 
 Repair-Motive uses Vagrant for the VM, Phinx for the DB migration, Gulp for the asset management, and Twig for the views. It's really simple
