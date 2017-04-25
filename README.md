@@ -31,6 +31,10 @@ Secondly, you'll need to SSH into your VM and navigate to repairmotive.com folde
 
 ```php vendor/robmorgan/phinx/bin/phinx migrate```
 
+Now that you've built the DB, it's time to seed it with data, run the following command (inside the VM):
+
+```php vendor/robmorgan/phinx/bin/phinx seed:run```
+
 ### Step 4
 You'll want to run Gulp. The project has a Gulpfile that utilize a watcher, so you wont need to keep running it every time you change the JS
 or CSS. Everything get's minified into the dist/ directory under www/
