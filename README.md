@@ -1,6 +1,11 @@
 # repair-motive
 Open Source automotive repair / reciept tracking.
 
+This is a platform that allows you to track automotive repairs and receipts. It comes with a built in back-end and front-end. The design is mobile-friendly,
+and the back-end has been intentially kept simple for many developers to easily pick up. 
+
+What's the stack? Php, MySQL, HTML / SASS, Javascript (jQuery). MaterializeCSS currently powers the front-end.
+
 This is my first ever open source software. It started out as a project, but I realized that this wasn't my passion to create auto-industry related apps.
 I hope someone finds this useful or maybe turns it into something bigger than I did.
 
